@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="sv">
-<title>brondera.com - Hello World!</title>
+<title>Axel Bronder's Speaker site</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -14,88 +14,124 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
 <style>
-  html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 </style>
-<html>
-<head>
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-<script>
-  var phonyArray = [];
-  $(document).ready(function(callback) {
-    $.ajax({
-      //call APT table using ORDS API (published by readonly user):
-      url: "https://dx4l1ex2ewgtxe9-db202003051643.adb.eu-frankfurt-1.oraclecloudapps.com/ords/bravo/phonetic/readonly"
-    }).then(function(res) {
-        $.each(res.items, function( i, itemData ) {
-            //populate phonyArray with data from table API
-            phonyArray[i] = itemData;
-        });
-        if(callback) callback();  //check before calling it. 
+<body class="w3-light-grey">
 
-        //check for parameters in url
-        const urlParams = new URLSearchParams(window.location.search);
-        //if there is a string parameter, process it
-        if (urlParams.has('userString')) {
-          str2 = urlParams.get('userString');
-          str2 = str2.toUpperCase(); //TODO: trim that string
-          for (var i = 0; i < str2.length; i++) {
-            //run everey character in the strin against the phonyarray
-            $('.telephony').append(phonyArray[phonyArray.indexOf(phonyArray.find(o => o.character === str2.charAt(i)))].telephony + " ");
-            $('.character').append(phonyArray[phonyArray.indexOf(phonyArray.find(o => o.character === str2.charAt(i)))].character + " ");
-            $('.morsecode').append(phonyArray[phonyArray.indexOf(phonyArray.find(o => o.character === str2.charAt(i)))].morsecode + " ");
-            $('.phonic').append(phonyArray[phonyArray.indexOf(phonyArray.find(o => o.character === str2.charAt(i)))].phonic + " ");
-          }
-        };
-    });
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
 
-  });
-</script>
-</head>
-<body class="w3-sand">
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          <img src="img/axelBronder.jpg" style="width:100%" alt="Avatar">
+          <div class="w3-display-bottomleft w3-container w3-text-white">
+            <h2>Axel Bronder</h2>
+          </div>
+        </div>
+        <div class="w3-container">
+          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-indigo"></i>Speaker</p>
+          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-indigo"></i>Cloud Solution Engineer - Oracle</p>
+          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-indigo"></i>Stockholm, Sweden</p>
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-indigo"></i>axel.bronder[at]oracle.com</p>
+          <hr>
 
-  <!-- Page Container -->
-  <div class="w3-container w3-center w3-margin-top">
-    <h1>Bravo!</h1>
-    <p>A demo page that turns Your strings into radio language!</p>
+          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-indigo"></i>Topics</b></p>
+          <p>Blockchain</p>
+          <p>Spatial / GIS / BIM</p>
+          <p>Smart Cities / IoT</p>
+          <p>Agile / Dev / Cloud</p>
+          <hr>
+
+          <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-indigo"></i>Languages</b></p>
+          <h6 class="w3-text-indigo">English</h6>
+          <p>Axel Bronder is a known presenter in the Spatial community, including IoT and Big Data, as well as in the enterprise Blockchain world. As a software developer he is determined to write as simple code as possible and he strives to leverage new technologies to create a better world for all. Axel has a history of successful projects for sustainable growth in east- and southern Africa, using technology and economics as key.</p>
+          <h6 class="w3-text-indigo">Swedish</h6>
+          <p>Axel Bronder är engagerad i uppgraderingar av samhället genom digital transformation och nya tekniker. Han är civilingenjör från KTH med bakgrund inom GIS & BIM och jobbar idag som Cloud Solution Engineer på Oracle.</p>
+          <hr>
+          
+          <p>Back to <a href="http://www.brondera.com/">brondera.com</a></p>
+
+        </div>
+      </div><br>
+
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-twothird">
+      <div class="w3-container w3-card w3-white">
+        <h2 class="w3-text-grey w3-padding-16">
+          <i class="fas fa-clipboard-list fa-fw w3-margin-right w3-xxlarge w3-text-indigo"></i>Upcoming Events</h2>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>TBD</b></h5>
+            <p><a href="mailto:axel.bronder@oracle.com">e-mail me!</a></p>
+          </div>
+      </div>
+      <div class="w3-container w3-card w3-white w3-margin-top">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fas fa-clipboard-check fa-fw w3-margin-right w3-xxlarge w3-text-indigo"></i>Past Events / References</h2>
+        <div class="w3-container">
+            <h5 class="w3-opacity"><b>Position för digitalt samhällsbyggande 2030</b></h5>
+            <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw w3-margin-right"></i>19-20 Mars 2019 KISTAMÄSSAN</h6>
+            <p>[Swedish] Få upp ögonen för Blockchain och börja din resa inom teknikområdet idag! Blockkedjetekniken kan trots sin relativa enkelhet ändå kännas abstrakt och överväldigande. Många känner till att löftet med Blockchain innebär stora vinster inom effektivisering och transparens – men hur börjar man? Vilka exempel finns från Samhällsbyggnad och vilka börjar använda systemen här i Norden? Molnet har berett väg för accelererad utveckling av nya tekniker såsom just Blockchain och vi ser därför redan idag långt gångna, och för oss samhällsbyggare högst relevanta blockkedje-implementationer, över hela världen. Vi dyker djupare i dessa exempel och diskuterar potentiella vägar framåt. Vi funderar även på riskerna med att hamna på efterkälken för oss som bransch, region och som yrkesverksamma individer.</p>
+            <p><a href="https://position2030.se/speakers/axel-bronder-cloud-solution-engineer-oracle/">Länk</a></p>
+          </div>
+          <hr>
+        <div class="w3-container">
+            <h5 class="w3-opacity"><b>Analytics and Data Summit 2019</b></h5>
+            <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw w3-margin-right"></i>March 12-14, 2019 Oracle Conference Center at Oracle Headquarters Campus, Redwood Shores, CA</h6>
+            <p>A new world with consensus-driven maps and crypto-spatial coordinates is emerging. Find out more and see how to embrace the change by leveraging Oracle cloud services such as Big Data Spatial & Graph and Blockchain. Learn about Blockchain use-cases and their benefits in terms of location and maps and see examples of how to embrace these benefits in your organization - we will look into relevant cases for both private and public sector.</p>
+            <p>Objectives:
+              <br>1. Get an update about the ongoing Blockhain transformation - applied to location and maps
+              <br>2. Find out how oracle cloud technologies can be leveraged to really benefit from this transformation
+              <br>3. Learn how your organization can advance from Blockchain spatial implementations
+            </p>
+            <p>Link: <a href="https://analyticsanddatasummit.org">analyticsanddatasummit.org</a></p>
+          </div>
+          <hr>
+
+        
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Let's Meetup And Do Some Blockchain Coding</b></h5>
+          <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw w3-margin-right"></i>6 December 2018 STOCKHOLM</h6>
+          <p>Get your skills going on decentralized application development. Blockchain is on everybody’s lips, and in this workshop, you will have the opportunity to get your hands dirty developing blockchain directly in the cloud, using a fun and engaging forest-saving use case. The skills acquired here is not vendor or even industry specific, rather you will get a deeper understanding of B2B blockchain development for more general leverage.</p>
+          <p>From <a href="https://www.meetup.com/DiscoTech-By-Oracle/">DiscoTech, By Oracle</a></p>
+          <p><a href="https://www.meetup.com/DiscoTech-By-Oracle/events/256328940/">Link</a></p>
+        </div>
+        <hr>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Oracle Open World - Oracle Code ONE</b></h5>
+          <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw w3-margin-right"></i>October 22–25 2018 SAN FRANCISCO</h6>
+          <p>Get your skills going on decentralized application development before everybody else! This session will jump-start your career in the decentralized field—making you ready for the future and an even more requested resource for companies all over the world. Blockchain is on everybody’s lips, and in this hands-on lab, you will have the opportunity to get your hands dirty developing chaincode directly in the cloud, using a fun and engaging forest-saving use case. Later on your code might be implemented to help save the environment!</p>
+          <p><a href="https://www.meetup.com/DiscoTech-By-Oracle/events/256328940/">Link</a></p>
+        </div>
+      </div>
+
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
   </div>
-  <div class="w3-white w3-text-grey w3-card-4 w3-center w3-margin">
-    <div class="w3-container w3-khaki">
-      <h2>Input Form</h2>
-    </div>
-    <!-- TODO: Might change to POST method? -->
-    <form class="w3-container w3-card-4">
-      <p>
-      <label for="userString">Please input a string in characters A-Z:</label><br>
-      <input class="w3-input w3-border" type="text" name="userString" id="userString" pattern="[a-zA-Z]+" title="Please only use characters A-Z" required></p>
-      <input class="w3-btn w3-black w3-margin-bottom" type="submit" value="Submit">
-    </form>
-   </div>
+  
+  <!-- End Page Container -->
+</div>
 
-   <div class="w3-white w3-text-grey w3-card-4 w3-center w3-margin">
-    <div class="w3-container w3-khaki">
-      <h2>Output</h2>
-    </div>
-    <p class="character w3-left-align w3-margin-left"><b>Character: </b></p>
-    <p class="morsecode w3-left-align w3-margin-left"><b>Morsecode: </b></p>
-    <p class="telephony w3-left-align w3-margin-left"><b>Telephony: </b></p>
-    <p class="phonic w3-left-align w3-margin-left"><b>Phonic: </b></p>
+<footer class="w3-container w3-indigo w3-center w3-margin-top">
+  <p>Find me on social media:</p>
+  <a href="https://twitter.com/axelbronder/"><i class="fab fa-twitter w3-xxlarge w3-margin-right w3-hover-opacity"></i></a>
+  <a href="https://github.com/brondera/"><i class="fab fa-github w3-xxlarge w3-margin-right w3-hover-opacity"></i></a>
+  <a href="https://www.linkedin.com/in/brondera/"><i class="fab fa-linkedin w3-xxlarge w3-hover-opacity"></i></a>
+  <p>
+    Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+    and <a href="https://www.oracle.com/cloud/free/" target="_blank">OCI Always Free Tier</a>
+  </p>
+  <p><a href="https://www.brondera.com">Back to brondera.com</a></p>
+</footer>
 
-    <div class="w3-container">
-      <!-- TODO: Make this actually clear something -->
-      <button class="w3-btn w3-black w3-margin-bottom">CLEAR</button>
-    </div>
-   </div>
-
-   <footer class="w3-container w3-khaki w3-center w3-margin-top">
-    <p>Find me on social media:</p>
-    <a href="https://twitter.com/axelbronder/"><i class="fab fa-twitter w3-xxlarge w3-margin-right w3-hover-opacity"></i></a>
-    <a href="https://github.com/brondera/"><i class="fab fa-github w3-xxlarge w3-margin-right w3-hover-opacity"></i></a>
-    <a href="https://www.linkedin.com/in/brondera/"><i class="fab fa-linkedin w3-xxlarge w3-hover-opacity"></i></a>
-    <p>
-      Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
-      and <a href="https://www.oracle.com/cloud/free/" target="_blank">OCI Always Free Tier</a>
-    </p>
-    <p><a href="https://www.brondera.com">Back to brondera.com</a></p>
-  </footer>
 </body>
 </html>
